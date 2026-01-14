@@ -1,0 +1,8 @@
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates
+    environment:
+      - DOMAIN_NAME=${DOMAIN_NAME}
+      - BACKEND_URL=${BACKEND_URL}
